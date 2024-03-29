@@ -168,7 +168,7 @@
 ; Register[0] is initialized with the index of the current result line and
 ; will range from 0 through <SCBPageSize-1>.
 ;
-; Place
+ Place
 \01%-3.3s
 ; Attempt
 \02%-2.2s
@@ -176,6 +176,10 @@
 \03%-4.4s
 ; Name
 \04%-30.30s
+; First Name
+\17%-30.30s
+; Last Name
+\18%-30.30s
 ; Affiliation
 \05%-28.28s
 ; Mark
@@ -194,6 +198,20 @@
 \9b%-11.11s
 ; Best Mark Converted (AthleticFIELD only)
 \9c%-11.11s
+; Field Series Marks
+\0b%-50.50s
+; Field Series Wind
+\0c%-50.50s
+; Next up Place
+\10%-3.3s
+; Next up name
+\13%-30.30s
+; Next up first name
+\15%-30.30s
+; Next Up last name
+\16%-30.30s
+;Board number
+\9d%-2.2s
 
 ;;MessageHeader
 ; This is sent once each time the scoreboard is updated with the message. It
