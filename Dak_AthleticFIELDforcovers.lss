@@ -165,10 +165,15 @@
 ;  \9a  Mark (Converted) - no vertical components (AthleticFIELD only)
 ;  \9b  Best Mark (AthleticFIELD only)
 ;  \9c  Best Mark Converted (AthleticFIELD only)
+;  \9d  Board Number (AthleticFIELD only)
+;  \9e  Multis points
+;  \8a  Personal Records
+;  \8b  rankings
+;  \8c  broken records
 ; Register[0] is initialized with the index of the current result line and
 ; will range from 0 through <SCBPageSize-1>.
 ;
- Place
+; Place
 \01%-3.3s
 ; Attempt
 \02%-2.2s
@@ -212,7 +217,14 @@
 \16%-30.30s
 ;Board number
 \9d%-2.2s
-
+;Multis points
+\9e%-5.5s
+;Personal Records
+\8a%-10.10s
+;Rankings
+\8b%-15.15s
+;Broken Records
+\8c%-15.15s
 ;;MessageHeader
 ; This is sent once each time the scoreboard is updated with the message. It
 ; is sent before any message lines are sent.
