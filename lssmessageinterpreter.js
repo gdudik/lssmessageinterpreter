@@ -391,6 +391,13 @@ udpPorts.forEach((port, index) => {
             const retransmissionPort = retransmissionPorts[index];
             const retransmittedMessage = removeTriggerSection(message, triggerStringDetails);
             sendUDPMessage(retransmittedMessage, retransmissionPort, retransmissionIP);
+            //duplicate the messages if it's LJ for the rulers
+            if (retransmissionPort === 21101) {
+              sendUDPMessage(retransmittedMessage, 41101, retransmissionIP);
+            }
+            if (retransmissionPort === 21102) {
+              sendUDPMessage(retransmittedMessage, 41102, retransmissionIP);
+            }
 
             if (triggerDetail.secondRetransmitPort) {
                 const extractedData = Buffer.from(extractedString);
